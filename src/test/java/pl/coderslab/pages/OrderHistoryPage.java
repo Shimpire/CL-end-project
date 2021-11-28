@@ -23,13 +23,13 @@ public class OrderHistoryPage {
         PageFactory.initElements(driver, this);
     }
 
-    public void goToOrderDetails(){
+    public void goToOrderDetails() {
         orderDetailsLink.click();
     }
 
-    public void checkLastOrderDetails(String orderRef, String orderPrice){
-        Assert.assertTrue("reference does not match last order",lastOrderReference.getText().contains(orderRef));
-        Assert.assertEquals("total price does not match last order",orderPrice,lastOrderTotal.getText());
+    public void checkLastOrderDetails(String orderRef, String orderPrice) {
+        Assert.assertTrue("reference does not match last order", lastOrderReference.getText().contains(orderRef));
+        Assert.assertEquals("total price does not match last order", orderPrice, lastOrderTotal.getText());
         Assert.assertEquals("last order status incorrect", "Awaiting check payment", orderStatus.getText());
     }
 }

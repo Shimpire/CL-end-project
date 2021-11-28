@@ -33,24 +33,24 @@ public class OrderSummaryPage {
         FileHandler.copy(scr, new File("C:\\CodersLab\\CL-end-project\\order-confirmation.png"));
     }
 
-    public void goToYourAccount(){
+    public void goToYourAccount() {
         accPanelBtn.click();
     }
 
-    public void setOrderPrice(){
+    public void setOrderPrice() {
         orderPrice = orderTotal.getText();
     }
 
-    public String getOrderPrice(){
+    public String getOrderPrice() {
         return orderPrice;
     }
 
-    public void setOrderRef(){
+    public void setOrderRef() {
         String fulltxt = orderReference.getText();
         orderRef = fulltxt.substring(18);
     }
 
-    public String getOrderRef(){
+    public String getOrderRef() {
         return orderRef;
     }
 }

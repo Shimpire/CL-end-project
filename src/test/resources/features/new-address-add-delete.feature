@@ -1,7 +1,7 @@
 Feature: MyStore - Add new user address
 
   @address
-    Scenario Outline: Existing user adds their first address on MyStore
+  Scenario Outline: Existing user adds their first address on MyStore
 
     Given User is on MyStore homepage
 
@@ -18,6 +18,6 @@ Feature: MyStore - Add new user address
     And new address named "<alias>" is deleted
 
     Examples:
-      | alias           | address           | city       | postcode | phone         |
-      | The Garrison    | 110 Garrison Ln   | Birmingham | B9 4BS   | 0121 772 6544 |
-      | Mrs Hudson      | 221B Baker Street | London     | NW1 6XE  | 2072243688    |
+      | alias        | address           | city       | postcode | phone         |
+      | The Garrison | 110 Garrison Ln   | Birmingham | B9 4BS   | 0121 772 6544 |
+      | Mrs Hudson   | 221B Baker Street | London     | NW1 6XE  | 2072243688    |
