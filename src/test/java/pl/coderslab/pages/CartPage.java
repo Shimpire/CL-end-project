@@ -10,7 +10,7 @@ public class CartPage {
     private final WebDriver driver;
 
     @FindBy(css = "div a.btn-primary")
-    WebElement checkoutButton;
+    private WebElement checkoutButton;
 
     public CartPage(WebDriver driver) {
         this.driver = driver;

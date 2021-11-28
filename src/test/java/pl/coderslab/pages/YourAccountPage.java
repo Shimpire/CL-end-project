@@ -14,6 +14,9 @@ public class YourAccountPage {
     @FindBy(css = "li.category:first-child a")
     private WebElement ClothesLink;
 
+    @FindBy(id = "history-link")
+    private WebElement OrderHistoryLink;
+
     public YourAccountPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
@@ -25,6 +28,10 @@ public class YourAccountPage {
 
     public void goToClothes() {
         ClothesLink.click();
+    }
+
+    public void goToHistory() {
+        OrderHistoryLink.click();
     }
 }
 

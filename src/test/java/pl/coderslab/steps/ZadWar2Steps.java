@@ -21,6 +21,7 @@ public class ZadWar2Steps {
     CartPage cartPage;
     OrderPage orderPage;
     OrderSummaryPage orderSummaryPage;
+    OrderHistoryPage orderHistoryPage;
 
     @Given("user is on MyStore main page")
     public void userIsOnMyStoreHomepage() {
@@ -92,6 +93,19 @@ public class ZadWar2Steps {
     public void orderConfirmationScreenshot() throws IOException {
         orderSummaryPage = new OrderSummaryPage(driver);
         orderSummaryPage.takeScreenshot();
+        orderSummaryPage.setOrderPrice();
+        orderSummaryPage.setOrderRef();
+    }
+
+    @And("user can check their order in order history")
+    public void checkOrderHistory() {
+        orderSummaryPage.goToYourAccount();
+        yourAccountPage.goToHistory();
+        orderHistoryPage = new OrderHistoryPage(driver);
+        orderHistoryPage.goToOrderDetails();
+        String ref = orderSummaryPage.getOrderRef();
+        String price = orderSummaryPage.getOrderPrice();
+        orderHistoryPage.checkLastOrderDetails(ref, price);
     }
 
     @And("close browser")

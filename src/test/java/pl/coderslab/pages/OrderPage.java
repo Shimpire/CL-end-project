@@ -12,22 +12,22 @@ public class OrderPage {
     private final WebDriver driver;
 
     @FindBy(css = "div.address")
-    WebElement deliveryAddress;
+    private WebElement deliveryAddress;
     @FindBy(name = "confirm-addresses")
-    WebElement confAddrBtn;
+    private WebElement confAddrBtn;
     @FindBy(css = "input#delivery_option_1")
-    WebElement deliveryMethod1;
+    private WebElement deliveryMethod1;
     @FindBy(css = "input#delivery_option_2")
-    WebElement deliveryMethod2;
+    private WebElement deliveryMethod2;
     @FindBy(name = "confirmDeliveryOption")
-    WebElement confirmDeliveryBtn;
+    private WebElement confirmDeliveryBtn;
     @FindBy(id = "payment-option-1")
-    WebElement paymentOption;
+    private WebElement paymentOption;
     //    @FindBy(id = "conditions_to_approve[terms-and-conditions]")
     @FindBy(css = "label.js-terms")
-    WebElement tosTickbox;
+    private WebElement tosTickbox;
     @FindBy(css = "div>button[type='submit'].center-block")
-    WebElement confOrderBtn;
+    private WebElement confOrderBtn;
 
     public OrderPage(WebDriver driver) {
         this.driver = driver;

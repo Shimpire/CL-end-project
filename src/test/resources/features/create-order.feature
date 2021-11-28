@@ -25,4 +25,6 @@ Feature: MyStore - make a purchase
 
     Then order is completed and screenshot taken of confirmation screen
 
+    And user can check their order in order history
+
     And close browser

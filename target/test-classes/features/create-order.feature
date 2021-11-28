@@ -23,14 +23,8 @@ Feature: MyStore - make a purchase
 
     And user selects payment option and completes order
 
-    Then user takes a screenshot of order confirmation
+    Then order is completed and screenshot taken of confirmation screen
 
-    And user waits 5s
+    And user can check their order in order history
 
     And close browser
-
-#    And user fills out following address details alias:"<alias>", address:"<address>", city:"<city>", postal code:"<postcode>", phone number:"<phone>"
-#
-#    Then new address is added to the account: "<alias>""<address>""<city>""<postcode>""<phone>"
-#
-#    And new address named "<alias>" is deleted

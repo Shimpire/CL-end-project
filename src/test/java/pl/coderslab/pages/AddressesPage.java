@@ -11,7 +11,7 @@ public class AddressesPage {
     private final WebDriver driver;
 
     @FindBy(css = "div.addresses-footer a[data-link-action='add-address']")
-    WebElement newAddressLink;
+    private WebElement newAddressLink;
 
     public AddressesPage(WebDriver driver) {
         this.driver = driver;
